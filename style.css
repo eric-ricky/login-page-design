@@ -91,19 +91,15 @@ a {
 
 .signup-box h1 {
     text-align: center;
-}
-.signup-box .textbox input {
-    margin-top: 2rem;
+    border-bottom: none;
 }
 
 @media only screen and (max-width: 768px) {
-    .box {
-        width: 80%;        
-    }
-    .box h1 {
-        font-size: 2.2rem;
-        border-bottom: 0.3rem solid #fe9b29;
-    }
+    .box {width: 80%;}
+    .box h1 {font-size: 2.2rem;}
+    .login-box h1 {border-bottom: 0.3rem solid #fe9b29;}
+    .textbox input {font-size: 1rem;}
+    .textbox i {font-size: .2rem;}
     .btn {font-size: 1.2rem; padding: .8rem 1rem;}
     .box p {font-size: .8rem;}
 }
