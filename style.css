@@ -6,59 +6,102 @@
 }
 body {
     min-height: 100vh;
-    background-image: linear-gradient(120deg,rgba(2, 58, 143, 0.5), rgba(153, 27, 147, 0.9)),
-    url('https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(153, 27, 147, 0.3)),
+    url('https://images.pexels.com/photos/1154618/pexels-photo-1154618.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.container {
-    width: 368px;
-    background: #f1f1f1;
+.box {
+    color: #fff;
+    width: 40%;
+    background: rgba(0, 0, 0, 0.7);
     height: 580px;
     padding: 80px 40px;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%) ;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
 }
-
-.container h1 {
-    margin-bottom: 2.4rem;
-    text-align: center;    
-}
-.container .txtbox {
-    border-bottom: 2px solid orange;
-    margin: 2rem 0;
+.textbox {
     position: relative;
+    width: 100%;
+    margin: 2rem 0;
+    padding: 8px 0;
+    border-bottom: 2px solid #fe9b29;   
+    display: flex;
 }
-.container .txtbox input {
+.textbox i {
+    width: 26px;
+    text-align: center;
+    color: white;
+}
+.textbox input {
     border: none;
     outline: none;
     background: none;
+    font-size: 1.5rem;
+    color: #fff;
+    width: 13rem;
+    margin: 0 1rem;
+}
+.btn {
     width: 100%;
-    padding: 0 1rem;
-    color: #333;
-    font-size: 15px;
-    height: 48px;
+    border: none;
+    outline: none;
+    padding: 1rem 1.2rem;
+    border-radius: 3rem;
+    margin: 2rem 0;
+    font-size: 1.4rem;
+    background: #fe9b29;
+    transition: all .4s ease-in;
+}
+.btn:hover {
+    background: transparent;
+    border: #fe9b29 solid 1px;
+    color: #fff;
+}
+.btn:focus {
+    transform: scale(.95);
+}
+.box p {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+.box p span {
+    color: #fe9b29;
+    cursor: pointer;
 }
 
-.txtbox span::before {
+.login-box h1 {
+    float: left;
+    font-size: 3rem;
+    border-bottom: .4rem solid #fe9b29;
+    margin-bottom: 2rem;
+    padding: 0.4rem 0;
+}
+.textbox span::before {
     content: attr(data-placeholder);
     position: absolute;
     top: 50%;
-    left: 1rem;
+    left: 2.57rem;
     color: #adadad;
     transform: translateY(-50%);
     z-index: -1;
     transition: 0.5s ease;
 }
-.txtbox span::after {
+.textbox span::after {
     content: '';
     position: absolute;
+    bottom: 0;
+    left: 0;
     width: 0%;
-    height: 2px;
-    background: #333;
+    height: 3px;
+    display: block;
+    background: #fe9b29;
     transition: 0.5s ease-in-out;
 }
 
@@ -69,3 +112,16 @@ body {
 .focus + span::after {
     width: 100%;
 }
+
+@media only screen and (max-width: 768px) {
+    .box {width: 80%;}
+    .box h1 {font-size: 2.2rem;}
+    .login-box h1 {border-bottom: 0.3rem solid #fe9b29;}
+    .textbox input {font-size: 1rem;}
+    .textbox i {font-size: .2rem;}
+    .btn {font-size: 1.2rem; padding: .8rem 1rem;}
+    .box p {font-size: .8rem;}
+}
+
+
+
